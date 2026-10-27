@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#142f38">
+<title>Calder Dashboard Studio</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="data.js"></script><script defer src="engine.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to dashboard</a>
+<header class="masthead"><div class="brand"><span class="brand-mark" aria-hidden="true">C</span><div><p class="eyebrow">CALDER MANUFACTURING</p><h1>Dashboard Studio</h1></div></div><div class="mast-actions"><button id="instructions">Assignment</button><button id="data-room">Data room</button><button id="save-file">Save work</button><button id="load-file">Open work</button><input id="work-file" type="file" accept=".json,application/json" hidden></div></header>
+<main id="main" tabindex="-1">
+<section class="intro"><div><p class="eyebrow">FINANCIAL REPORTING · AUGUST 2025</p><h2>Give each user a useful view.</h2><p>Select a user, read their brief, and arrange a dashboard for their recurring decisions.</p></div><div class="progress"><span id="progress-count">0 of 3</span><span>designs meet the brief</span></div></section>
+<div id="storage-status" role="status" hidden></div>
+<nav id="users" class="user-tabs" aria-label="Dashboard user"></nav>
+<section id="brief" class="brief" aria-label="User brief"></section>
+<div class="workspace"><aside class="library"><div class="library-heading"><p class="eyebrow">VISUAL LIBRARY</p><h2>Choose what belongs.</h2><p>Drag a tile onto the canvas, or select it and choose a position.</p></div><label class="search-label">Find a measure or chart<input id="search" type="search" placeholder="Search the library"></label><div class="catalog-filters" role="group" aria-label="Library type"><button class="active" data-type="all" aria-pressed="true">All</button><button data-type="KPI" aria-pressed="false">KPIs</button><button data-type="Chart" aria-pressed="false">Charts</button><button data-type="Table" aria-pressed="false">Tables</button></div><div id="catalog" class="catalog"></div></aside>
+<section class="canvas-panel" aria-labelledby="canvas-title"><div class="canvas-toolbar"><div><p class="eyebrow">YOUR DASHBOARD</p><h2 id="canvas-title"></h2></div><div><button id="undo" disabled>Undo</button><button id="reset-user" class="quiet">Clear this view</button></div></div><div class="report-context"><span>Calder Manufacturing · All plants · USD</span><span>August 2025 · Preliminary posted balances</span><span>Refreshed September 11, 2025 at 18:00 company time · Definitions 1.0</span></div><p class="canvas-help" id="canvas-help">Make the user’s key decisions easy to assess in the first row. Use the second row for other essential information and the third row for any additional context. You do not need to fill all nine spaces. Leave unused spaces empty.</p><p id="placing" class="placing" role="status" hidden></p><div id="canvas" class="canvas" aria-describedby="canvas-help"></div><div class="check-bar"><span id="check-state">This design has not been checked.</span><button id="check" class="primary">Submit for checking</button></div><section id="feedback" class="feedback" aria-live="polite" aria-atomic="true" hidden></section></section>
+</div>
+</main>
+<footer><span>Calder Manufacturing · Financial reporting workspace</span><button id="reset-all">Start over</button></footer>
+<dialog id="modal" aria-labelledby="modal-title"><div class="modal-heading"><h2 id="modal-title"></h2><button id="close-modal" aria-label="Close dialog">Close</button></div><div id="modal-body"></div></dialog>
+<div id="announcement" class="sr-only" aria-live="polite"></div>
+</body></html>
